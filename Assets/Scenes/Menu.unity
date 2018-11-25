@@ -298,6 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad011154a0c942b3b5383419ea0266c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  form: Hand
 --- !u!4 &49204576
 Transform:
   m_ObjectHideFlags: 0
@@ -2449,7 +2450,7 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Fast
       m_Image: {fileID: 0}
-    - m_Text: Extremly Fast
+    - m_Text: Extremely Fast
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
