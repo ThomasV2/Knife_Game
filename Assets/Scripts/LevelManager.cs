@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class LevelManager : MonoBehaviour
     MoveKnife moveKnife;
     TriggerManager triggerManager;
     Text endScoreText;
+    GameData gameData;
 
     int score = 0;
 
@@ -23,6 +25,8 @@ public class LevelManager : MonoBehaviour
         moveKnife = Object.FindObjectOfType<MoveKnife>();
         triggerManager = Object.FindObjectOfType<TriggerManager>();
         endScoreText = EndMenu.GetComponentInChildren<Text>();
+        gameData = Object.FindObjectOfType<GameData>();
+        moveKnife.speed = gameData.Speed;
     }
 
     public void StartGame()

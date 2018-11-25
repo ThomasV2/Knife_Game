@@ -11,7 +11,7 @@ public class MoveKnife : MonoBehaviour
     Animation anim;
     Ray stabRaycast;
 
-    public float speed = 50f;
+    public float speed;
     public GameObject weapon;
     public TriggerManager triggerManager;
 

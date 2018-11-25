@@ -152,15 +152,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1386347468584002, guid: 685657f0f907149268e469029295e940, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 23390146800232826, guid: 685657f0f907149268e469029295e940,
-        type: 2}
-      propertyPath: m_ReceiveShadows
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 685657f0f907149268e469029295e940, type: 2}
   m_IsPrefabAsset: 0
@@ -1622,7 +1613,7 @@ Transform:
   m_GameObject: {fileID: 1948075061}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -9.98, z: -9.65}
-  m_LocalScale: {x: 29.735552, y: 1, z: 21.033632}
+  m_LocalScale: {x: 43.001568, y: 1, z: 31.62655}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
