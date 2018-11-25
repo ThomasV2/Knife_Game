@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     public Text TextScore;
     public AudioClip EndSound;
     public GameObject EndMenu;
+    public 
 
     AudioSource audioSource;
     MoveKnife moveKnife;
@@ -27,6 +28,7 @@ public class LevelManager : MonoBehaviour
         endScoreText = EndMenu.GetComponentInChildren<Text>();
         gameData = Object.FindObjectOfType<GameData>();
         moveKnife.speed = gameData.Speed;
+        triggerManager.InitialiseStart(gameData.form);
     }
 
     public void StartGame()
@@ -54,8 +56,9 @@ public class LevelManager : MonoBehaviour
         TextScore.text = "Score: " + score.ToString();
     }
 
-    public void QuitApplication()
+    public void QuitGame()
     {
-        Application.Quit();
+        Destroy(gameData.gameObject);
+        SceneManager.LoadScene("Menu");
     }
 }

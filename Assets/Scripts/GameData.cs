@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class GameData : MonoBehaviour {
 
     int speed = 50;
+    [HideInInspector]
+    public string form = "Hand";
 
     public int Speed { 
         get { return speed; } 
@@ -27,6 +29,24 @@ public class GameData : MonoBehaviour {
                     break;
             }
         } 
+    }
+
+    public int Form
+    { 
+        set {
+            switch (value)
+            {
+                case 0:
+                    form = "Hand";
+                    break;
+                case 1:
+                    form = "Tentacule";
+                    break;
+                default:
+                    form = "Hand";
+                    break;
+            }
+        }
     }
 
     void Start()

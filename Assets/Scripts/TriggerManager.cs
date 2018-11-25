@@ -9,8 +9,10 @@ public class TriggerManager : MonoBehaviour {
 
     public LevelManager levelManager;
 
-	// Use this for initialization
-	void Start () {
+	public void InitialiseStart (string formName) {
+        Instantiate(Resources.Load("Prefab/" + formName));
+        GameObject tmp = Instantiate(Resources.Load("Prefab/" + formName + "_Trigger")) as GameObject;
+        tmp.transform.SetParent(this.transform);
         colliders = this.gameObject.GetComponentsInChildren<BoxCollider>();
         foreach (var boxCollider in colliders)
         {
@@ -27,18 +29,14 @@ public class TriggerManager : MonoBehaviour {
         {
             if (hit.transform.tag == "Good")
             {
-                Debug.Log("Good hit");
                 levelManager.GetOnePoint();
                 return NextTrigger();
             }
             else
             {
-                Debug.Log("Bad hit");
                 levelManager.EndGame();
             }   
         }
-        else
-            Debug.Log("no hit");
         return 0;
     }
 
