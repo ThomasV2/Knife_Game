@@ -42,6 +42,9 @@ public class GameData : MonoBehaviour {
                 case 1:
                     form = "Tentacule";
                     break;
+                case 2:
+                    form = "Alien";
+                    break;
                 default:
                     form = "Hand";
                     break;
